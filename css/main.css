@@ -201,7 +201,7 @@ and (max-width : 480px) {
 }
 #back-top i {
     margin-top: 7px;
-    font-size: 20px;
+    font-size: auto;
 }
 }
  .section-title p {
