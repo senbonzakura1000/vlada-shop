@@ -1,0 +1,374 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	font-family: 'Ninja NarutoRUS', regular;
+	min-width: 320px;  
+    background-image: url(1621562849_12-phonoteka_org-p-fon-kolyuchaya-provoloka-12.jpg);      
+}
+main{
+	flex-grow: 1;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style-type: none;
+}
+.navbar{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	background:black;
+	color:white;
+}
+.nav-links a{
+	color:white;
+}
+.logo a{
+    color: #fff;
+}
+.logo p{
+	font-size: 40px;
+    
+}
+.menu{
+	display: flex;
+	font-size: 20px;
+}
+.menu li{
+	padding: 5px 15px;
+}
+.menu li a:hover{
+	transition: all .3s;
+	color:red;
+	text-decoration: underline;
+}
+#checkbox_toggle{
+	display: none;
+}
+.hamburger{
+	display: none;
+	font-size: 24px;
+	cursor: pointer;	
+}
+.hamburger-line{
+	background-color: white;
+	display: block;	
+	height: 2px;
+	position: relative;	
+	width: 24px;
+}
+.hamburger-line::before,.hamburger-line::after{
+	background-color: white;
+	display: block;	
+	position: absolute;
+	content: '';
+	transition: all .3s;
+	width: 100%;
+	height: 100%;
+}
+.hamburger-line::before{
+	top: 7px;
+}
+.hamburger-line::after{
+	top: -7px;
+}
+@media(max-width:840px){
+	.menu{
+		display: none;
+		max-height: 0;
+		overflow: hidden;
+		position: absolute;	
+		background-color: black ;
+		text-align: center;
+		right: 	0;
+		left: 0;
+		margin-top: 50px;
+	}
+	.menu li a{
+		color: red;
+		display: block;
+		padding: 15px;
+	}
+	.menu li{
+		transition: all .5s;
+	}
+	#checkbox_toggle:checked ~ .menu{
+		display: block;
+		max-height: 100%;
+		transition: all .5s;
+	}
+	.hamburger{
+		display: block;
+		padding: 20px 0;	
+	}
+	#checkbox_toggle:checked ~ .hamburger .hamburger-line{
+		background-color: transparent;
+	}
+	#checkbox_toggle:checked ~ .hamburger .hamburger-line::before{
+		transform: rotate(-45deg);
+		top:0;
+	}
+	#checkbox_toggle:checked ~ .hamburger .hamburger-line::after{
+		transform: rotate(45deg);
+
+	}
+}
+footer{
+	background-color: black;
+
+}
+#footer{
+	color:white;
+	display:flex;
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	width: 30em;
+	align-items: center;
+}
+#soc{
+background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display:flex;
+    align-items: center;
+
+}
+#soc p{
+	text-align: center;
+    display:flex;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#back-top {
+    position: fixed;
+    z-index: 1000;
+    bottom: 40px;
+    right: 50px;
+}
+#back-top a {
+    width: 60px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    font-size: 400%;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-radius: 15px;
+    background: #000000;
+
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+#back-top a:hover {
+    background: #ff0000;
+}
+
+#back-top i {
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+#back-top {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+}
+#back-top a {
+    width: 40px;
+    height: 40px;
+}
+#back-top i {
+    margin-top: 7px;
+    font-size: 20px;
+}
+}
+ .section-title p {
+ 	background: #000000; 
+    color: #fff; 
+    padding: 10px; 
+    border-radius: 10px;
+    margin-top: 30px;
+   margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+
+   }
+   .section-title a{
+    color: #fff;
+   }
+.col-lg-12 p{
+	background: #000; 
+    color: #fff; 
+    padding: 10px; 
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+}
+#maket {
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+   }
+   TD {
+    
+    vertical-align: top; 
+    padding: 5px; 
+  
+   }
+   TD#leftcol {
+    width: 50%;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #000; 
+   }
+   TD#rightcol {
+    display:flex;
+    justify-content: center;
+    background:#fff; 
+    border: 1px solid #000; 
+   }
+   #spacer {
+    width: 10px; 
+   }
+.left p{
+   float: left;
+   padding: 0 20px 20px 0;
+ 	border: 1px solid black;
+    padding: 10px;
+ }
+.faq-item{
+    margin-bottom: 20px;
+    background: #000; 
+    color: #fff; 
+    padding: 10px;
+    border-radius: 15px; 
+}
+.faq{
+    margin: 20px auto;
+    max-width: auto;
+}
+
+.faq-title{
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+    transition: background .2s ease-out;
+
+}
+.faq-title:after{
+    content: "";
+    display: block  ;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-style: solid;
+border-width: 20px 9px 0 9px;;
+border-color: #fff transparent transparent transparent;
+transform: translateY(-50%);
+}
+
+.faq-input{
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+}
+
+.faq-input:checked~.faq-text{
+    background-color: #fff;
+    display: block;
+}
+.faq-input:checked~.faq-title:after{
+    border-style: solid;
+border-width: 0 9px 20px 9px;
+border-color: transparent transparent #fff transparent;
+}
+.faq-text{
+    display: none;
+    padding: 10px 15px;
+    background: #fff; 
+    color: #000; 
+    padding: 10px; 
+    border-radius: 15px;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 250px 250px 250px;
+	grid-template-rows: 350px 350px;
+	grid-gap: 50px;
+    justify-content: center;
+	grid-auto-rows: 0px;
+	grid-auto-columns: 300px;
+
+	grid-auto-flow: column;
+}
+#perbw {
+    background-color: #000;
+    text-align: center;
+
+}
+
+#perw{
+    background-color: #000;
+    text-align: center;
+}
+#sha{
+    background-color: #000;
+    text-align: center;
+}
+#shap{
+    background-color: #000;
+    text-align: center;
+}
+#svet{
+    background-color: #000;
+    text-align: center;
+}
+#per{
+    background-color: #000;
+    text-align: center;
+}
+.gid {
+	display: grid;
+	grid-template-columns: 250px 250px 250px;
+	grid-template-rows: 350px; 
+	grid-gap: 50px;
+
+    justify-content: center;
+
+	grid-auto-rows: 0px;
+	grid-auto-columns: 300px;
+
+	grid-auto-flow: column;
+}
+span{
+    font-family: Geneva, Arial, Helvetica, sans-serif;;
+}
