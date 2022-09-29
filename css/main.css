@@ -321,7 +321,7 @@ border-color: transparent transparent #fff transparent;
 }
 .grid {
 	display: grid;
-	grid-template-columns: 250px 250px 250px;
+    grid-template-columns: repeat(3,250px);
 	grid-template-rows: 350px 350px;
 	grid-gap: 50px;
     justify-content: center;
